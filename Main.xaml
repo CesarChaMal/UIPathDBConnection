@@ -46,13 +46,18 @@
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Flowchart DisplayName="Main" sap:VirtualizedContainerService.HintSize="758,636" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="NewTransaction" />
       <Variable x:TypeArguments="ui:DatabaseConnection" Name="databaseConnectionConnectDatabase" />
-      <Variable x:TypeArguments="sd:DataTable" Name="dtSqlQuery" />
+      <Variable x:TypeArguments="sd:DataTable" Name="datatable" />
     </Flowchart.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -74,7 +79,7 @@
           <av:PointCollection x:Key="ConnectorLocation">360,175.02 360,243.6</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:DatabaseConnect DatabaseConnection="[databaseConnectionConnectDatabase]" DisplayName="Connect" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="DatabaseConnect_1" ProviderName="MySql.Data.MySqlClient" ConnectionString="Data Source=.;AttachDbFilename=C:\Users\Cesar\Documents\master.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True">
+      <ui:DatabaseConnect DatabaseConnection="[databaseConnectionConnectDatabase]" DisplayName="Connect" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="DatabaseConnect_1" ProviderName="System.Data.Odbc" ConnectionString="Dsn=mysql;description=mysql 8 connection;server=localhost;uid=root;pwd=root;database=configurator;port=3306">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -90,7 +95,7 @@
               <av:PointCollection x:Key="ConnectorLocation">360,294.6 360,346.4</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DataTable="[dtSqlQuery]" DisplayName="Execute query" ExistingDbConnection="[databaseConnectionConnectDatabase]" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ExecuteQuery_1" Sql="SELECT Name,ProductModel">
+          <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DataTable="[datatable]" DisplayName="Execute query" ExistingDbConnection="[databaseConnectionConnectDatabase]" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ExecuteQuery_1" Sql="SELECT jira_id, jhi_key FROM configurator.jira_ticket">
             <ui:ExecuteQuery.Parameters>
               <scg:Dictionary x:TypeArguments="x:String, Argument" />
             </ui:ExecuteQuery.Parameters>
@@ -108,19 +113,20 @@
                   <av:Size x:Key="ShapeSize">200,51</av:Size>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[dtSqlQuery]" DisplayName="For each row" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+              <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[datatable]" DisplayName="For each row" sap:VirtualizedContainerService.HintSize="322,402" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
                 <ui:ForEachRow.Body>
                   <ActivityAction x:TypeArguments="sd:DataRow">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="233.6,187.2" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="272,254" sap2010:WorkflowViewState.IdRef="Sequence_7">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <WriteLine DisplayName="Write line" sap:VirtualizedContainerService.HintSize="211.2,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[row.ToString()]" />
+                      <WriteLine DisplayName="Write line" sap:VirtualizedContainerService.HintSize="230,61" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="[&quot;jira_id: &quot; + row(“jira_id”).ToString]" />
+                      <WriteLine DisplayName="Write line" sap:VirtualizedContainerService.HintSize="230,61" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[&quot;jhi_key: &quot; + row(“jhi_key”).ToString]" />
                     </Sequence>
                   </ActivityAction>
                 </ui:ForEachRow.Body>

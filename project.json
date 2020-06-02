@@ -3,6 +3,7 @@
   "description": "Db Connection",
   "main": "Main.xaml",
   "dependencies": {
+    "MySql.Data": "[8.0.20]",
     "UiPath.Database.Activities": "[1.3.7369.25200]",
     "UiPath.Excel.Activities": "[2.8.5]",
     "UiPath.Mail.Activities": "[1.8.5]",
