@@ -126,28 +126,6 @@
         "C:\\Users\\a782327\\.nuget\\packages\\uipath.vision/2.0.3\\lib/net461/UiPath.Vision.dll"
       ],
       "Path": "C:\\Users\\a782327\\.nuget\\packages\\uipath.uiautomation.activities\\20.4.1"
-    },
-    {
-      "Package": {
-        "Id": "MySql.Data",
-        "Version": "8.0.20"
-      },
-      "Assemblies": [
-        "C:\\Users\\a782327\\.nuget\\packages\\bouncycastle/1.8.5\\lib/BouncyCastle.Crypto.dll",
-        "C:\\Users\\a782327\\.nuget\\packages\\google.protobuf/3.6.1\\lib/net45/Google.Protobuf.dll",
-        "C:\\Users\\a782327\\.nuget\\packages\\k4os.compression.lz4/1.1.11\\lib/net46/K4os.Compression.LZ4.dll",
-        "C:\\Users\\a782327\\.nuget\\packages\\k4os.compression.lz4.streams/1.1.11\\lib/net46/K4os.Compression.LZ4.Streams.dll",
-        "C:\\Users\\a782327\\.nuget\\packages\\k4os.hash.xxhash/1.0.6\\lib/net46/K4os.Hash.xxHash.dll",
-        "C:\\Users\\a782327\\.nuget\\packages\\mysql.data/8.0.20\\lib/net452/MySql.Data.dll",
-        "C:\\Users\\a782327\\.nuget\\packages\\mysql.data/8.0.20\\lib/net452/Ubiety.Dns.Core.dll",
-        "C:\\Users\\a782327\\.nuget\\packages\\mysql.data/8.0.20\\lib/net452/Zstandard.Net.dll",
-        "C:\\Users\\a782327\\.nuget\\packages\\ssh.net/2016.1.0\\lib/net40/Renci.SshNet.dll",
-        "C:\\Users\\a782327\\.nuget\\packages\\system.buffers/4.5.0\\lib/netstandard2.0/System.Buffers.dll",
-        "C:\\Users\\a782327\\.nuget\\packages\\system.memory/4.5.3\\lib/netstandard2.0/System.Memory.dll",
-        "C:\\Users\\a782327\\.nuget\\packages\\system.numerics.vectors/4.4.0\\lib/net46/System.Numerics.Vectors.dll",
-        "C:\\Users\\a782327\\.nuget\\packages\\system.runtime.compilerservices.unsafe/4.6.0\\lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll"
-      ],
-      "Path": "C:\\Users\\a782327\\.nuget\\packages\\mysql.data\\8.0.20"
     }
   ],
   "Conflicts": [],
@@ -187,11 +165,6 @@
       "Version": "2.8.0",
       "Dependencies": []
     },
-    "Google.Protobuf": {
-      "Id": "Google.Protobuf",
-      "Version": "3.6.1",
-      "Dependencies": []
-    },
     "Humanizer.Core": {
       "Id": "Humanizer.Core",
       "Version": "2.4.2",
@@ -201,40 +174,6 @@
       "Id": "interop.domino.dll",
       "Version": "1.0.0",
       "Dependencies": []
-    },
-    "K4os.Compression.LZ4": {
-      "Id": "K4os.Compression.LZ4",
-      "Version": "1.1.11",
-      "Dependencies": [
-        {
-          "Item1": "System.Memory",
-          "Item2": "[4.5.3, )"
-        }
-      ]
-    },
-    "K4os.Compression.LZ4.Streams": {
-      "Id": "K4os.Compression.LZ4.Streams",
-      "Version": "1.1.11",
-      "Dependencies": [
-        {
-          "Item1": "K4os.Compression.LZ4",
-          "Item2": "[1.1.11, )"
-        },
-        {
-          "Item1": "K4os.Hash.xxHash",
-          "Item2": "[1.0.6, )"
-        }
-      ]
-    },
-    "K4os.Hash.xxHash": {
-      "Id": "K4os.Hash.xxHash",
-      "Version": "1.0.6",
-      "Dependencies": [
-        {
-          "Item1": "System.Memory",
-          "Item2": "[4.5.3, )"
-        }
-      ]
     },
     "Microsoft.AspNet.SignalR.Client": {
       "Id": "Microsoft.AspNet.SignalR.Client",
@@ -266,44 +205,6 @@
       "Version": "7.10.6071",
       "Dependencies": []
     },
-    "MySql.Data": {
-      "Id": "MySql.Data",
-      "Version": "8.0.20",
-      "Dependencies": [
-        {
-          "Item1": "BouncyCastle",
-          "Item2": "[1.8.3.1, )"
-        },
-        {
-          "Item1": "Google.Protobuf",
-          "Item2": "[3.6.1, )"
-        },
-        {
-          "Item1": "K4os.Compression.LZ4",
-          "Item2": "[1.1.11, )"
-        },
-        {
-          "Item1": "K4os.Compression.LZ4.Streams",
-          "Item2": "[1.1.11, )"
-        },
-        {
-          "Item1": "K4os.Hash.xxHash",
-          "Item2": "[1.0.6, )"
-        },
-        {
-          "Item1": "SSH.NET",
-          "Item2": "[2016.1.0, )"
-        },
-        {
-          "Item1": "System.Buffers",
-          "Item2": "[4.5.0, )"
-        },
-        {
-          "Item1": "System.Runtime.CompilerServices.Unsafe",
-          "Item2": "[4.6.0, )"
-        }
-      ]
-    },
     "Newtonsoft.Json": {
       "Id": "Newtonsoft.Json",
       "Version": "11.0.2",
@@ -324,47 +225,9 @@
       "Version": "1.0.0",
       "Dependencies": []
     },
-    "SSH.NET": {
-      "Id": "SSH.NET",
-      "Version": "2016.1.0",
-      "Dependencies": []
-    },
-    "System.Buffers": {
-      "Id": "System.Buffers",
-      "Version": "4.5.0",
-      "Dependencies": []
-    },
     "System.IO.Abstractions": {
       "Id": "System.IO.Abstractions",
       "Version": "3.0.10",
-      "Dependencies": []
-    },
-    "System.Memory": {
-      "Id": "System.Memory",
-      "Version": "4.5.3",
-      "Dependencies": [
-        {
-          "Item1": "System.Buffers",
-          "Item2": "[4.4.0, )"
-        },
-        {
-          "Item1": "System.Numerics.Vectors",
-          "Item2": "[4.4.0, )"
-        },
-        {
-          "Item1": "System.Runtime.CompilerServices.Unsafe",
-          "Item2": "[4.5.2, )"
-        }
-      ]
-    },
-    "System.Numerics.Vectors": {
-      "Id": "System.Numerics.Vectors",
-      "Version": "4.4.0",
-      "Dependencies": []
-    },
-    "System.Runtime.CompilerServices.Unsafe": {
-      "Id": "System.Runtime.CompilerServices.Unsafe",
-      "Version": "4.6.0",
       "Dependencies": []
     },
     "System.Threading.Tasks.Dataflow": {
@@ -627,16 +490,6 @@
     },
     {
       "Package": {
-        "Id": "Google.Protobuf",
-        "Version": "3.6.1"
-      },
-      "Assemblies": [
-        "C:\\Users\\a782327\\.nuget\\packages\\google.protobuf\\3.6.1\\lib\\net45\\Google.Protobuf.dll"
-      ],
-      "Path": "C:\\Users\\a782327\\.nuget\\packages\\google.protobuf\\3.6.1"
-    },
-    {
-      "Package": {
         "Id": "Humanizer.Core",
         "Version": "2.4.2"
       },
@@ -654,36 +507,6 @@
         "C:\\Users\\a782327\\.nuget\\packages\\interop.domino.dll\\1.0.0\\lib\\Interop.Domino.dll"
       ],
       "Path": "C:\\Users\\a782327\\.nuget\\packages\\interop.domino.dll\\1.0.0"
-    },
-    {
-      "Package": {
-        "Id": "K4os.Compression.LZ4",
-        "Version": "1.1.11"
-      },
-      "Assemblies": [
-        "C:\\Users\\a782327\\.nuget\\packages\\k4os.compression.lz4\\1.1.11\\lib\\net46\\K4os.Compression.LZ4.dll"
-      ],
-      "Path": "C:\\Users\\a782327\\.nuget\\packages\\k4os.compression.lz4\\1.1.11"
-    },
-    {
-      "Package": {
-        "Id": "K4os.Compression.LZ4.Streams",
-        "Version": "1.1.11"
-      },
-      "Assemblies": [
-        "C:\\Users\\a782327\\.nuget\\packages\\k4os.compression.lz4.streams\\1.1.11\\lib\\net46\\K4os.Compression.LZ4.Streams.dll"
-      ],
-      "Path": "C:\\Users\\a782327\\.nuget\\packages\\k4os.compression.lz4.streams\\1.1.11"
-    },
-    {
-      "Package": {
-        "Id": "K4os.Hash.xxHash",
-        "Version": "1.0.6"
-      },
-      "Assemblies": [
-        "C:\\Users\\a782327\\.nuget\\packages\\k4os.hash.xxhash\\1.0.6\\lib\\net46\\K4os.Hash.xxHash.dll"
-      ],
-      "Path": "C:\\Users\\a782327\\.nuget\\packages\\k4os.hash.xxhash\\1.0.6"
     },
     {
       "Package": {
@@ -728,18 +551,6 @@
     },
     {
       "Package": {
-        "Id": "MySql.Data",
-        "Version": "8.0.20"
-      },
-      "Assemblies": [
-        "C:\\Users\\a782327\\.nuget\\packages\\mysql.data\\8.0.20\\lib\\net452\\MySql.Data.dll",
-        "C:\\Users\\a782327\\.nuget\\packages\\mysql.data\\8.0.20\\lib\\net452\\Ubiety.Dns.Core.dll",
-        "C:\\Users\\a782327\\.nuget\\packages\\mysql.data\\8.0.20\\lib\\net452\\Zstandard.Net.dll"
-      ],
-      "Path": "C:\\Users\\a782327\\.nuget\\packages\\mysql.data\\8.0.20"
-    },
-    {
-      "Package": {
         "Id": "Newtonsoft.Json",
         "Version": "11.0.2"
       },
@@ -773,26 +584,6 @@
     },
     {
       "Package": {
-        "Id": "SSH.NET",
-        "Version": "2016.1.0"
-      },
-      "Assemblies": [
-        "C:\\Users\\a782327\\.nuget\\packages\\ssh.net\\2016.1.0\\lib\\net40\\Renci.SshNet.dll"
-      ],
-      "Path": "C:\\Users\\a782327\\.nuget\\packages\\ssh.net\\2016.1.0"
-    },
-    {
-      "Package": {
-        "Id": "System.Buffers",
-        "Version": "4.5.0"
-      },
-      "Assemblies": [
-        "C:\\Users\\a782327\\.nuget\\packages\\system.buffers\\4.5.0\\lib\\netstandard2.0\\System.Buffers.dll"
-      ],
-      "Path": "C:\\Users\\a782327\\.nuget\\packages\\system.buffers\\4.5.0"
-    },
-    {
-      "Package": {
         "Id": "System.IO.Abstractions",
         "Version": "3.0.10"
       },
@@ -800,36 +591,6 @@
         "C:\\Users\\a782327\\.nuget\\packages\\system.io.abstractions\\3.0.10\\lib\\net40\\System.IO.Abstractions.dll"
       ],
       "Path": "C:\\Users\\a782327\\.nuget\\packages\\system.io.abstractions\\3.0.10"
-    },
-    {
-      "Package": {
-        "Id": "System.Memory",
-        "Version": "4.5.3"
-      },
-      "Assemblies": [
-        "C:\\Users\\a782327\\.nuget\\packages\\system.memory\\4.5.3\\lib\\netstandard2.0\\System.Memory.dll"
-      ],
-      "Path": "C:\\Users\\a782327\\.nuget\\packages\\system.memory\\4.5.3"
-    },
-    {
-      "Package": {
-        "Id": "System.Numerics.Vectors",
-        "Version": "4.4.0"
-      },
-      "Assemblies": [
-        "C:\\Users\\a782327\\.nuget\\packages\\system.numerics.vectors\\4.4.0\\lib\\net46\\System.Numerics.Vectors.dll"
-      ],
-      "Path": "C:\\Users\\a782327\\.nuget\\packages\\system.numerics.vectors\\4.4.0"
-    },
-    {
-      "Package": {
-        "Id": "System.Runtime.CompilerServices.Unsafe",
-        "Version": "4.6.0"
-      },
-      "Assemblies": [
-        "C:\\Users\\a782327\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.6.0\\lib\\netstandard2.0\\System.Runtime.CompilerServices.Unsafe.dll"
-      ],
-      "Path": "C:\\Users\\a782327\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.6.0"
     },
     {
       "Package": {
