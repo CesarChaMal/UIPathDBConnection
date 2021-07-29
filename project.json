@@ -1,5 +1,5 @@
 {
-  "name": "DbConnection",
+  "name": "UIPathDBConnection",
   "description": "Db Connection",
   "main": "Main.xaml",
   "dependencies": {
